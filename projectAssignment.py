@@ -57,7 +57,7 @@ index = np.arange(len(ps.index))
 plt.xlabel('Period');
 plt.ylabel('Calories');
 plt.xticks(index, ps.index);
-plt.title('Data Sheet');
+plt.title('(1910-1910)');
 plt.bar(ps.index,ps.values);
 plt.show();
 print(round(datas["Calories"].head(11).mean(), 2))
@@ -68,8 +68,8 @@ index = np.arange(len(ps.index))
 plt.xlabel('Period');
 plt.ylabel('Calories');
 plt.xticks(index, ps.index);
-plt.title('Data Sheet');
-plt.bar(ps.index,ps.values);
+plt.title('(1911-1920)');
+plt.bar(ps.index, ps.values);
 plt.show();
 print(round(datas[11:21]["Calories"].mean(), 2))
 print(round(datas[11:21]["Calories"].sum(), 2))
@@ -79,8 +79,8 @@ index = np.arange(len(ps.index))
 plt.xlabel('Period');
 plt.ylabel('Calories');
 plt.xticks(index, ps.index);
-plt.title('Data Sheet');
-plt.bar(ps.index,ps.values);
+plt.title('(1921-1930)');
+plt.bar(ps.index, ps.values);
 plt.show();
 print(round(datas[21:31]["Calories"].mean(), 2))
 print(round(datas[21:31]["Calories"].sum(), 2))
