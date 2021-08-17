@@ -8,15 +8,18 @@ import matplotlib.pyplot as plt
 # dates.index = dates["Year"]
 # print(dates)
 #
-# df1 = dates[(dates["Year"] >= str(1900)) & (dates["Year"] <= str(1910))]
-# qs = df1["Calories"].sort_values();
+# q1 = dates[(dates["Year"] >= str(1900)) & (dates["Year"] <= str(1910))]
+# q2 = dates[(dates["Year"] >= str(1911)) & (dates["Year"] <= str(1921))]
+# q3 = dates[(dates["Year"] >= str(1921)) & (dates["Year"] <= str(1931))]
+#
+# qs = q1["Calories"].sort_values();
 # index = np.array(len(qs.index));
 # plt.xlabel('Year')
 # plt.ylabel('Number of Calories')
 # plt.xticks(index, qs.index);
 # plt.title('Data Sheet');
 # plt.bar(qs.index, qs.values);
-# print(plt.show())
+# plt.show()
 # print(round(data["Calories"].head(11).mean(), 2))
 # print(round(data["Calories"].head(11).sum(), 2)) #end of first bar chat
 #
@@ -57,10 +60,10 @@ index = np.arange(len(ps.index))
 plt.xlabel('Period');
 plt.ylabel('Calories');
 plt.xticks(index, ps.index);
-plt.title('(1910-1910)');
+plt.title('(1900-1910)');
 plt.bar(ps.index,ps.values);
 plt.show();
-print(round(datas["Calories"].head(11).mean(), 2))
+print(round(datas[1:11]["Calories"].mean(), 2))
 print(round(datas["Calories"].head(11).sum(), 2))#end of first bar chat
 
 ps = q2['Calories'].sort_values()
