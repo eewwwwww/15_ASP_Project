@@ -3,12 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 Others03 = pd.read_excel('IMVA.xls', sheet_name='IMVA')
-print(Others03)
-print(Others03.columns)
+# print(Others03)
+# print(Others03.columns)
 
 df_OthersCountries03 = Others03[['Periods', "Americas", "Canada", "USA", "Other Markets In Americas", "Oceania", "Australia", "New Zealand", "Other Markets In Oceania", "Africa", "Egypt", "Mauritius", "South Africa (Rep Of)", "Other Markets In Africa"]]
-print(df_OthersCountries03.columns)
-print(df_OthersCountries03)
+# print(df_OthersCountries03.columns)
+# print(df_OthersCountries03)
 
 new = df_OthersCountries03['Periods'].str.split(' ', n=1, expand=True)
 df_OthersCountries03 = df_OthersCountries03.assign(Year=new[0])
@@ -59,21 +59,21 @@ print("The mean value for the top 3 countries is ",mean)
 indexAll = np.arange(len(allCountries.index))
 
 
-plt.figure(figsize=(10, 10))
-plt.title('All other Countries from(Period:2011-2020)')
-plt.xlabel('Countries', fontsize=8)
-plt.ylabel('No. of Travellers (in thousands)', fontsize=8)
-plt.xticks(indexAll, allCountries.index, fontsize=6, rotation=30)
-plt.bar(allCountries.index, allCountries.values / 1000)
-plt.show()
-
-indexAll = np.arange(len(allCountries.index))
-
-plt.figure(figsize=(10, 10))
-plt.title('Top 3 Countries from(Period:2011-2020)')
-plt.xlabel('Countries', fontsize=8)
-plt.ylabel('No. of Travellers (in thousands)', fontsize=8)
-plt.xticks(indexAll, allCountries.index, fontsize=6, rotation=30)
-plt.bar(top3countries.index, top3countries.values / 1000)
-plt.show()
+# plt.figure(figsize=(10, 10))
+# plt.title('All other Countries from(Period:2011-2020)')
+# plt.xlabel('Countries', fontsize=8)
+# plt.ylabel('No. of Travellers (in thousands)', fontsize=8)
+# plt.xticks(indexAll, allCountries.index, fontsize=6, rotation=30)
+# plt.bar(allCountries.index, allCountries.values / 1000)
+# plt.show()
+#
+# indexAll = np.arange(len(allCountries.index))
+#
+# plt.figure(figsize=(10, 10))
+# plt.title('Top 3 Countries from(Period:2011-2020)')
+# plt.xlabel('Countries', fontsize=8)
+# plt.ylabel('No. of Travellers (in thousands)', fontsize=8)
+# plt.xticks(indexAll, allCountries.index, fontsize=6, rotation=30)
+# plt.bar(top3countries.index, top3countries.values / 1000)
+# plt.show()
 
