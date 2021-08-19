@@ -4,3 +4,4 @@ import matplotlib.pyplot as plt
 
 dates = pd.read_excel("IMVA.xls")
 print(dates)
+print(dates.columns)
