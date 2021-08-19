@@ -66,18 +66,29 @@ plt.show();
 print(round(datas[1:11]["Calories"].mean(), 2))
 print(round(datas["Calories"].head(11).sum(), 2))#end of first bar chat
 
-ps = q2['Calories'].sort_values()
-index = np.arange(len(ps.index))
-plt.xlabel('Period');
-plt.ylabel('Calories');
-plt.xticks(index, ps.index);
-plt.title('(1911-1920)');
-plt.bar(ps.index, ps.values);
-plt.show();
-print(round(datas[11:21]["Calories"].mean(), 2))
-print(round(datas[11:21]["Calories"].sum(), 2))
+# ps = q2['Calories'].sort_values()
+# index = np.arange(len(ps.index))
+# plt.xlabel('Period');
+# plt.ylabel('Calories');
+# plt.xticks(index, ps.index);
+# plt.title('(1911-1920)');
+# plt.bar(ps.index, ps.values);
+# plt.show();
+# print(round(datas[11:21]["Calories"].mean(), 2))
+# print(round(datas[11:21]["Calories"].sum(), 2))
 
-ps = q3['Calories'].sort_values()
+# ps =['Calories'].sort_values()
+# index = np.arange(len(ps.index))
+# plt.xlabel('Period');
+# plt.ylabel('Calories');
+# plt.xticks(index, ps.index);
+# plt.title('(1921-1930)');
+# plt.bar(ps.index, ps.values);
+# plt.show();
+# print(round(datas[21:31]["Calories"].mean(), 2))
+# print(round(datas[21:31]["Calories"].sum(), 2))
+
+ps = datas['Calories'].nlargest(3)
 index = np.arange(len(ps.index))
 plt.xlabel('Period');
 plt.ylabel('Calories');
@@ -85,5 +96,3 @@ plt.xticks(index, ps.index);
 plt.title('(1921-1930)');
 plt.bar(ps.index, ps.values);
 plt.show();
-print(round(datas[21:31]["Calories"].mean(), 2))
-print(round(datas[21:31]["Calories"].sum(), 2))
