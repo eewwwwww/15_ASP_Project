@@ -9,8 +9,8 @@ data = dates['Periods'].str.split(' ', n=1, expand = True)
 dates = dates.assign(Year="Periods"[1])
 dates.index = dates["Year"]
 print(dates)
-q1 = dates[(dates["Year"] >= str(2011)) & (dates["Year"] <= str(2020))]
-df = pd.DataFrame(newdata)
-print(df)
+# q1 = dates[(dates["Year"] >= str(2011)) & (dates["Year"] <= str(2020))]
+# df = pd.DataFrame(newdata)
+# print(df)
 # print(df.head(3))
 # print(df.tail(3))
